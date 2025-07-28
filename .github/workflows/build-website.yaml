@@ -39,7 +39,14 @@ jobs:
       - name: Build the Vite project
         run: npm run build
         env:
-          VITE_BASE: pmd-quiz-online
+          VITE_BASE: christina-bday-2025
+
+      - name: Debug - List dist contents
+        run: |
+          echo "Contents of dist folder:"
+          ls -la ./dist/
+          echo "Contents of dist/index.html:"
+          cat ./dist/index.html
 
       - name: Prepare Pages Deployment
         uses: actions/configure-pages@v5  # set up GitHub Pages deployment

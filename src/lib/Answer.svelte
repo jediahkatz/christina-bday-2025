@@ -19,7 +19,7 @@
   };
 
   function onClick(sendMessage = true) {
-    // Update stores
+    // Update nature points for personality calculation
     answer.scores.forEach((score) => {
       let nature = score.nature;
       let points = score.points;
@@ -34,10 +34,12 @@
 
     if(!sendMessage) return;
 
+    clickSound.volume = 0.1;
     clickSound.play();
 
     dispatch("message", {
       id: answer.id,
+      responseId: answer.id,
     });
   }
 

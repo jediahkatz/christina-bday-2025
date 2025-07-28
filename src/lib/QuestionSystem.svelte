@@ -18,6 +18,9 @@
   let carousel = null;
 
   function onCorrectQuestion(event) {
+    // Track the response
+    $store.responses[index] = event.detail.responseId;
+    
     carousel.goToNext();
     index++;
 
@@ -26,19 +29,8 @@
     // }
   }
 
-  function getRandomNumOfQuestions(numberOfQuestions) {
-    let questions = [];
-
-    while (questions.length < numberOfQuestions) {
-      let randomIndex = Math.floor(Math.random() * data.length);
-      let randomQuestion = data[randomIndex];
-
-      if (!questions.includes(randomQuestion)) {
-        questions.push(randomQuestion);
-      }
-    }
-
-    return questions;
+  function getFixedQuestions(numberOfQuestions) {
+    return data.slice(0, numberOfQuestions);
   }
 
   onMount(() => {
@@ -56,12 +48,15 @@
 
     $store.points = point;
     $store.maxPoints = utils.getMaxPoints(point, $store.questions);
+    
+    // Initialize responses array
+    $store.responses = new Array(10).fill(-1);
 
     data = $store.questions;
     numberOfQuestions = $store.numQuestions;
 
     if (numberOfQuestions > 0) {
-      questions = getRandomNumOfQuestions(numberOfQuestions);
+      questions = getFixedQuestions(numberOfQuestions);
     } else {
       numberOfQuestions = data.length;
       questions = data;

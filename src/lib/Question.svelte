@@ -10,10 +10,10 @@
 
   function handleMessage(event) {
     //alert(event.detail.id);
-    updateModelStatus(event.detail.id);
+    updateModelStatus(event.detail.id, event.detail.responseId);
   }
 
-  function updateModelStatus(id) {
+  function updateModelStatus(id, responseId) {
     // Get the clicked button
     let clickedButton = answerComponents[id];
 
@@ -24,7 +24,7 @@
         answerComponents[i].disabled = (i != id);
       }
 
-      dispatch("correctQuestion");
+      dispatch("correctQuestion", { responseId: responseId });
     }
     else
     {

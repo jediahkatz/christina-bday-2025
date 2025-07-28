@@ -1,0 +1,322 @@
+[
+  {
+    "id": 0,
+    "title": "You want to reveal that you like someone a whole bunch! What do you do?",
+    "responses": [
+      {
+        "id": 0,
+        "response": "Show it a little by playing together.",
+        "scores": [
+          {"nature": "Jolly", "points": 4},
+          {"nature": "Quiet", "points": 2}
+        ]
+      },
+      {
+        "id": 1,
+        "response": "Make it obvious by...playing a prank!",
+        "scores": [
+          {"nature": "Naive", "points": 2},
+          {"nature": "Lonely", "points": 4}
+        ]
+      },
+      {
+        "id": 2,
+        "response": "State it clearly for all to hear!",
+        "scores": [
+          {"nature": "Brave", "points": 4},
+          {"nature": "Impish", "points": 4},
+          {"nature": "Bold", "points": 2}
+        ]
+      },
+      {
+        "id": 3,
+        "response": "Keep it to myself! It's too risky!",
+        "scores": [
+          {"nature": "Timid", "points": 2}
+        ]
+      }
+    ]
+  },  
+  {
+    "id": 1,
+    "title": "Do you prefer to play outside rather than inside?",
+    "responses": [
+        {
+            "id": 0,
+            "response": "Yes.",
+            "scores": [
+                {
+                    "nature": "Impish",
+                    "points": 4
+                },
+                {
+                    "nature": "Rash",
+                    "points": 4
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "response": "No.",
+            "scores": [
+                {
+                    "nature": "Calm",
+                    "points": 2
+                }
+            ]
+        }
+    ]
+},
+  {
+    "id": 2,
+    "title": "Your friend tells you that they got invited to a party. What do you do?",
+    "responses": [
+      {
+        "id": 0,
+        "response": "I'm going to go!",
+        "scores": [
+          {"nature": "Jolly", "points": 4},
+          {"nature": "Bold", "points": 4}
+        ]
+      },
+      {
+        "id": 1,
+        "response": "It's always a party at my house!",
+        "scores": [
+          {"nature": "Impish", "points": 4},
+          {"nature": "Sassy", "points": 4}
+        ]
+      },
+      {
+        "id": 2,
+        "response": "I'd rather stay home and watch a movie.",
+        "scores": [
+          {"nature": "Lonely", "points": 4}
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "You're at the buffet for a wedding. What do you put on your plate?",
+    "responses": [
+      {
+        "id": 0,
+        "response": "A savory and delicious selection!",
+        "scores": [
+          {"nature": "Brave", "points": 4},
+          {"nature": "Impish", "points": 4},
+          {"nature": "Rash", "points": 2}
+        ]
+      },
+      {
+        "id": 1,
+        "response": "The food that mom used to make.",
+        "scores": [
+          {"nature": "Timid", "points": 2},
+          {"nature": "Hardy", "points": 2}
+        ]
+      },
+      {
+        "id": 2,
+        "response": "The fancy dishes that I rarely get to eat.",
+        "scores": [
+          {"nature": "Naive", "points": 2},
+          {"nature": "Hasty", "points": 4}
+        ]
+      },
+      {
+        "id": 3,
+        "response": "Anything, as long as I'm having a good time!",
+        "scores": [
+          {"nature": "Docile", "points": 2},
+          {"nature": "Relaxed", "points": 2}
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "You're daydreaming...when your friend sprays you with water! What do you do?",
+    "responses": [
+      {
+        "id": 0,
+        "response": "Get mad!",
+        "scores": [
+          {"nature": "Hasty", "points": 4}
+        ]
+      },
+      {
+        "id": 1,
+        "response": "Get sad.",
+        "scores": [
+          {"nature": "Lonely", "points": 4}
+        ]
+      },
+      {
+        "id": 2,
+        "response": "Woo-hoo! Water fight!",
+        "scores": [
+          {"nature": "Jolly", "points": 4},
+          {"nature": "Impish", "points": 4},
+          {"nature": "Naive", "points": 4}
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Have you ever looked at your reflection in a mirror and thought, 'What a cool person'?",
+    "responses": [
+      {
+        "id": 0,
+        "response": "Certainly!",
+        "scores": [
+          {"nature": "Jolly", "points": 2},
+          {"nature": "Naive", "points": 2},
+          {"nature": "Sassy", "points": 4}
+        ]
+      },
+      {
+        "id": 1,
+        "response": "Well, not really...",
+        "scores": [
+          {"nature": "Hardy", "points": 2}
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "How are your mornings?",
+    "responses": [
+        {
+            "id": 0,
+            "response": "Always in a rush!",
+            "scores": [
+                {
+                    "nature": "Brave",
+                    "points": 4
+                },
+                {
+                    "nature": "Impish",
+                    "points": 4
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "response": "Calm and gradual.",
+            "scores": [
+                {
+                    "nature": "Quiet",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "response": "What morning?",
+            "scores": [
+                {
+                    "nature": "Docile",
+                    "points": 2
+                },
+                {
+                    "nature": "Timid",
+                    "points": 4
+                }
+            ]
+        }
+    ]
+},
+  {
+    "id": 7,
+    "title": "What kind of environment helps you feel most like yourself?",
+    "responses": [
+      {
+        "id": 0,
+        "response": "The beautiful place where I can stroll and reflect tranquilly.",
+        "scores": [
+          {"nature": "Relaxed", "points": 4},
+          {"nature": "Calm", "points": 2}
+        ]
+      },
+      {
+        "id": 1,
+        "response": "The inspiring place that sparks creativity and imagination.",
+        "scores": [
+          {"nature": "Jolly", "points": 4},
+          {"nature": "Naive", "points": 2}
+        ]
+      },
+      {
+        "id": 2,
+        "response": "The fascinating place where I can learn something new.",
+        "scores": [
+          {"nature": "Hardy", "points": 4},
+          {"nature": "Quiet", "points": 2}
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Do you think blaming something you did on someone else is sometimes necessary?",
+    "responses": [
+        {
+            "id": 0,
+            "response": "Of course!",
+            "scores": [
+                {
+                    "nature": "Sassy",
+                    "points": 4
+                },
+                {
+                    "nature": "Quiet",
+                    "points": 4
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "response": "No way!",
+            "scores": [
+                {
+                    "nature": "Brave",
+                    "points": 4
+                }
+            ]
+        }
+    ]
+},
+  {
+    "id": 9,
+    "title": "You see a big and comfortable bed. Your first reaction is to...",
+    "responses": [
+      {
+        "id": 0,
+        "response": "Jump on it!",
+        "scores": [
+          {"nature": "Hasty", "points": 2},
+          {"nature": "Sassy", "points": 2}
+        ]
+      },
+      {
+        "id": 1,
+        "response": "Find someone to share it with!",
+        "scores": [
+          {"nature": "Impish", "points": 4},
+          {"nature": "Bold", "points": 4}
+        ]
+      },
+      {
+        "id": 2,
+        "response": "Curl up.",
+        "scores": [
+          {"nature": "Lonely", "points": 4}
+        ]
+      }
+    ]
+  }
+]

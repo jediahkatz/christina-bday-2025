@@ -1,11 +1,17 @@
 <script>
   import RadialChart from "./RadialChart.svelte";
-  import { store } from "../assets/store.js";
+  import { store, encodeResponses } from "../assets/store.js";
   import { fade } from "svelte/transition";
   import { transition_out } from "svelte/internal";
 
   $: strings = $store.strings;
   let imagesSrc = [];
+  let responseCode = "";
+
+  // Generate the response code when the component loads
+  $: if ($store.responses && $store.responses.length > 0) {
+    responseCode = encodeResponses($store.responses);
+  }
 
   store.subscribe((value) => {
     calculateImages();
@@ -103,6 +109,22 @@
         }}"
         class="text-white select-none text-box p-0 my-4 w-[75%] lg:w-[30%] block lg:hidden"
         >{strings["Restart"]}</button>
+        
+        {#if responseCode}
+          <div class="bg-black/30 rounded-lg p-4 mt-4 w-[75%] lg:w-[90%]">
+            <h3 class="text-white text-lg font-semibold mb-2 text-center">
+              Quiz Code
+            </h3>
+            <div class="bg-white/10 rounded-lg p-3 text-center">
+              <p class="text-white font-mono text-xl">
+                {responseCode}
+              </p>
+            </div>
+            <p class="text-white/60 text-sm text-center mt-2">
+              Take a pic and send this page to your boyfriend!
+            </p>
+          </div>
+        {/if}
       </div>
     </div>
   </section>

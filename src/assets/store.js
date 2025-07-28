@@ -1,7 +1,9 @@
 import { writable } from 'svelte/store';
 import { getMaxPoints } from './utils.js';
 import { getLanguage } from './utils.js';
-export let store = writable({});
+export let store = writable({
+  responses: [] // Track actual responses instead of nature points
+});
 
 let lang = getLanguage();
 
@@ -10,7 +12,7 @@ let baseURL = import.meta.env.BASE_URL
 export async function loadData() {
   const [natures, questions, natureToPokemon, natureDescription, strings] = await Promise.all([
     fetch(`${baseURL}lang/${lang}/natures-${lang}.json`).then(res => res.json()),
-    fetch(`${baseURL}lang/${lang}/questions-${lang}.json`).then(res => res.json()),
+    fetch(`${baseURL}lang/${lang}/christina-questions.json`).then(res => res.json()),
     fetch(`${baseURL}lang/${lang}/naturetopokemon-${lang}.json`).then(res => res.json()),
     fetch(`${baseURL}lang/${lang}/naturedescription-${lang}.json`).then(res => res.json()),
     fetch(`${baseURL}lang/${lang}/strings-${lang}.json`).then(res => res.json()),
@@ -109,5 +111,36 @@ export const radialChartConfig = {
       color: 'rgba(0, 0, 0, 0)',
     }
   }
+}
+
+// Encoding/Decoding functions for response sequences
+export function encodeResponses(responses) {
+  // Convert responses to a compact base-36 string
+  // Each response ID is typically 0-3, so we can use base-4 encoding
+  let encoded = '';
+  for (let response of responses) {
+    encoded += response.toString();
+  }
+  // Convert to base-36 for shorter representation
+  return parseInt(encoded, 4).toString(36).toUpperCase();
+}
+
+export function decodeResponses(code) {
+  // Decode base-36 back to response sequence
+  let decoded = parseInt(code.toLowerCase(), 36).toString(4);
+  // Pad with zeros if needed (for leading zeros that were lost)
+  while (decoded.length < 10) {
+    decoded = '0' + decoded;
+  }
+  return decoded.split('').map(Number);
+}
+
+export function getResponseSummary(responses, questions) {
+  return responses.map((responseId, questionIndex) => ({
+    question: questions[questionIndex].title,
+    answer: questions[questionIndex].responses[responseId].response,
+    questionId: questionIndex,
+    responseId: responseId
+  }));
 }
 
